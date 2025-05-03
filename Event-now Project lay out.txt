@@ -1,0 +1,85 @@
+Events Booking Application
+-------------------------------
+Server Setup
+-------------------------------
+Routing: userRouter, EventRouter
+1. Register a User
+	USAGE: Register a User
+	URL: http://127.0.0.1:5000/users/register
+	Method: POST
+	Fields: name, email, password
+	Access: PUBLIC
+	
+2. Login a User
+	USAGE: Login a User
+	URL: http://127.0.0.1:5000/users/login
+	Method: POST
+	Fields: email, password
+	Access: PUBLIC
+	
+3. Get User Info
+	USAGE: Get User Info
+	URL: http://127.0.0.1/users/me
+	Method: GET
+	Fields: no-fields
+	Access: PRIVATE
+	
+4. Upload an Event
+	USAGE: Upload an Event
+	URL: http://127.0.0.1:5000/events/upload
+	Method: POST
+	Fields: name,image,price,date,info, type
+	Access: PRIVATE
+	
+5. Get All Free Events
+	USAGE: Get all free Events
+	URL: http://127.0.0.1:5000/events/free
+	Method: GET
+	Fields: no-fields
+	Access: PUBLIC
+
+6. Get All Pro Events
+	USAGE: get PRO Free Events	
+	URL: http://127.0.0.1:5000/events/pro
+	Fields: no-fields
+	Access: PUBLIC
+
+7.	Get a Single Event
+	USAGE: Get a Single Event
+	URL: http://127.0.0.1/events/:eventId
+	Method: GET
+	Fields: no-fields
+	Access: PUBLIC
+
+DataBase Setup
+-------------------
+DataBase : events-booking
+Tables : user, event
+user Table: id, name, email, password, avatar, isAdmin, createdAt, updatedAt
+events Table: id, name, image, price, date, info , type, createdAt, updatedAt
+
+Server Side Modules
+-----------------------
+list of packages to be installed:
+express
+cors
+dotenv
+gravatar
+bcryptjs
+jsonwebtoken
+express-validator
+mongoose
+installation like this: 
+npm install express cors dotenv gravatar bcryptjs jsonwebtoken express-validator mongoose
+
+
+@types/node
+@types/express
+@types/cors
+@types/dotenv
+@types/gravatar
+@types/bcryptjs
+@types/jsonwebtoken
+@types/mongoose
+
+npm install @types/node @types/express @types/cors @types/dotenv @types/gravatar @types/bcryptjs @types/jsonwebtoken @types/mongoose
